@@ -13,6 +13,7 @@ use Inertia\Inertia;
 //     return Inertia::render('Home', ['name' =>'mike']);
 // });
 // Route::inertia('/', 'Home');
-Route::get('/', [PostController::class, 'index'])->name('home');
 
-route::resource('posts', PostController::class)->except('index');
+Route::get('/', [PostController::class, 'index']);
+
+Route::resource('posts', PostController::class)->except('index');

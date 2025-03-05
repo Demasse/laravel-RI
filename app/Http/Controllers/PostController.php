@@ -13,9 +13,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        return inertia ('Home') ;
+        $posts = Post::all();
+        return inertia('Home', ['posts' => $posts]); // Changer 'post' en 'posts'
     }
-
     /**
      * Show the form for creating a new resource.
      */
